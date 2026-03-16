@@ -57,7 +57,21 @@ class ETendersPipeline(Pipeline):
             msg = f"eTenders data not found at {csv_path}"
             raise FileNotFoundError(msg)
 
-        self._df = pd.read_csv(csv_path, dtype=str, nrows=self.limit)
+        self._df = pd.read_csv(
+            csv_path, dtype=str, nrows=self.limit, encoding="latin-1"
+        )
+        # Normalise column names from real OGP format
+        col_map = {
+            "Name of Contracting Authority": "contracting_authority",
+            "Name of Client Contracting Authority": "client_authority",
+            "Title of Contract": "title",
+            "Suppliers": "supplier_name",
+            "ContractAwardConfirmedDate": "award_date",
+            "Contract Start Date": "start_date",
+            "Contract End Date": "end_date",
+            "Common Procurement Vocabulary (CPV) codes": "cpv_code",
+        }
+        self._df.rename(columns=col_map, inplace=True)
         self.rows_in = len(self._df)
         logger.info("Extracted %d contracts", self.rows_in)
 
@@ -75,13 +89,13 @@ class ETendersPipeline(Pipeline):
 
         seen_authorities: dict[str, dict[str, Any]] = {}
 
-        for _, row in df.iterrows():
+        for idx, row in df.iterrows():
             contract_ref = _clean(row.get("contract_ref"))
             if not contract_ref:
-                continue
+                contract_ref = f"OGP-{idx}"
 
-            authority_id = _clean(row.get("authority_id"))
             authority_name = _clean(row.get("contracting_authority"))
+            authority_id = authority_name.replace(" ", "_")[:60] if authority_name else ""
             supplier_company = _clean(row.get("supplier_company_number"))
 
             # Parse value

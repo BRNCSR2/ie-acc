@@ -55,7 +55,27 @@ class PPRPipeline(Pipeline):
             msg = f"PPR data not found at {csv_path}"
             raise FileNotFoundError(msg)
 
-        self._df = pd.read_csv(csv_path, dtype=str, nrows=self.limit)
+        self._df = pd.read_csv(
+            csv_path, dtype=str, nrows=self.limit, encoding="latin-1"
+        )
+        # Normalise column names from real PPR format
+        col_map = {
+            "Date of Sale (dd/mm/yyyy)": "sale_date",
+            "Address": "address",
+            "County": "county",
+            "Eircode": "eircode",
+            "Not Full Market Price": "not_full_market_price",
+            "VAT Exclusive": "vat_exclusive",
+            "Description of Property": "description",
+            "Property Size Description": "property_size_desc",
+        }
+        self._df.rename(columns=col_map, inplace=True)
+        # Handle price column (may contain euro symbol and commas)
+        price_col = next(
+            (c for c in self._df.columns if "price" in c.lower()), None
+        )
+        if price_col and price_col != "price_eur":
+            self._df.rename(columns={price_col: "price_eur"}, inplace=True)
         self.rows_in = len(self._df)
         logger.info("Extracted %d property sales", self.rows_in)
 
@@ -71,13 +91,14 @@ class PPRPipeline(Pipeline):
                 return ""
             return str(val).strip() if val else ""
 
-        for _, row in df.iterrows():
+        for idx, row in df.iterrows():
             sale_id = _clean(row.get("sale_id"))
             if not sale_id:
-                continue
+                sale_id = f"PPR-{idx}"
 
-            # Parse price
+            # Parse price — handle €123,456.00 format
             price_str = _clean(row.get("price_eur"))
+            price_str = price_str.replace("\u20ac", "").replace(",", "").strip()
             try:
                 price = float(price_str) if price_str else 0.0
             except ValueError:
