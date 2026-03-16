@@ -1,0 +1,11 @@
+contract_ref,title,contracting_authority,authority_id,supplier_name,supplier_company_number,value_eur,award_date,cpv_code,procedure_type,status
+CT-2024-001,Social Housing Construction Phase 3,Department of Housing,AUTH001,Greenfield Construction LTD,100001,4500000,2024-03-15,45000000,Open,Awarded
+CT-2024-002,Waste Collection Services Cork Region,Cork City Council,AUTH002,Celtic Waste Solutions PLC,100002,1200000,2024-04-20,90500000,Restricted,Awarded
+CT-2024-003,IT Infrastructure Upgrade,Department of Public Expenditure,AUTH003,Atlantic Digital DAC,100003,890000,2024-05-10,72000000,Open,Awarded
+CT-2024-004,School Building Programme Galway,Department of Education,AUTH004,Greenfield Construction LTD,100001,3200000,2024-06-01,45210000,Open,Awarded
+CT-2024-005,Marine Research Equipment,Marine Institute,AUTH005,Galway Bay Fisheries TEO,100004,450000,2024-06-15,38000000,Negotiated,Awarded
+CT-2024-006,Wind Farm Maintenance Contract,ESB Networks,AUTH006,Shannon Renewables CLG,100005,780000,2024-07-01,31120000,Open,Awarded
+CT-2024-007,Hospital Equipment Supply,HSE South,AUTH007,Munster Medical Supplies LTD,200001,2100000,2024-07-20,33100000,Open,Awarded
+CT-2024-008,Road Resurfacing Dublin South,Dublin City Council,AUTH008,Greenfield Construction LTD,100001,1800000,2024-08-01,45233000,Open,Awarded
+CT-2024-009,Data Centre Cooling Systems,OPW,AUTH009,Atlantic Digital DAC,100003,650000,2024-08-15,42500000,Restricted,Awarded
+CT-2024-010,Community Centre Construction,Department of Housing,AUTH001,Greenfield Construction LTD,100001,2700000,2024-09-01,45212000,Open,Awarded

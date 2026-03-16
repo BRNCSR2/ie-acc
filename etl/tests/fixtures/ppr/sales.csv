@@ -1,0 +1,11 @@
+sale_id,sale_date,address,county,eircode,price_eur,not_full_market_price,vat_exclusive,property_size_desc,description
+PPR-2024-001,2024-01-15,12 Grafton Street,Dublin,D02 VX88,450000,No,No,greater than or equal to 38 sq metres and less than 125 sq metres,Second-Hand Dwelling house /Apartment
+PPR-2024-002,2024-01-22,45 Patrick Street,Cork,T12 AB34,320000,No,No,greater than or equal to 38 sq metres and less than 125 sq metres,Second-Hand Dwelling house /Apartment
+PPR-2024-003,2024-02-10,8 Shop Street,Galway,H91 XY12,275000,No,No,greater than or equal to 38 sq metres and less than 125 sq metres,New Dwelling house /Apartment
+PPR-2024-004,2024-02-28,22 O'Connell Street,Limerick,V94 CD56,195000,No,Yes,greater than or equal to 38 sq metres and less than 125 sq metres,Second-Hand Dwelling house /Apartment
+PPR-2024-005,2024-03-15,Unit 7 Sandyford Business Park,Dublin,D18 EF78,1200000,No,Yes,greater than or equal to 125 sq metres,New Dwelling house /Apartment
+PPR-2024-006,2024-04-01,Rossaveal Harbour Road,Galway,,180000,Yes,No,greater than or equal to 38 sq metres and less than 125 sq metres,Second-Hand Dwelling house /Apartment
+PPR-2024-007,2024-04-20,15 Main Street,Clare,V95 GH90,210000,No,No,greater than or equal to 38 sq metres and less than 125 sq metres,Second-Hand Dwelling house /Apartment
+PPR-2024-008,2024-05-10,Ballincollig Village,Cork,P31 IJ12,385000,No,No,greater than or equal to 125 sq metres,New Dwelling house /Apartment
+PPR-2024-009,2024-06-01,Temple Bar,Dublin,D02 KL34,550000,No,No,greater than or equal to 38 sq metres and less than 125 sq metres,Second-Hand Dwelling house /Apartment
+PPR-2024-010,2024-06-15,Ennis Road,Clare,V95 MN56,165000,No,No,less than 38 sq metres,Second-Hand Dwelling house /Apartment

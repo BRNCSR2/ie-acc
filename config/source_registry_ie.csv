@@ -1,0 +1,17 @@
+source_id,name,category,url,access_method,format,status,priority,identifier,notes
+cro,Companies Registration Office,identity,https://opendata.cro.ie/,api+bulk,csv,loaded,P0,company_number,Daily updated bulk CSV
+lobbying,Lobbying Register,political,https://www.lobbying.ie/,web,html,loaded,P0,registration_number,Structured returns since 2015
+oireachtas,Oireachtas Open Data,political,https://api.oireachtas.ie/,api,json+xml,loaded,P0,member_id,REST API with debates and questions
+charities,Charities Regulator,identity,https://www.charitiesregulator.ie/,bulk,xlsx,loaded,P0,rcn,Bulk XLSX download
+etenders,eTenders/OGP,procurement,https://data.gov.ie/organization/office-of-government-procurement,bulk,csv,loaded,P0,contract_ref,Quarterly CSV via data.gov.ie
+epa,EPA Open Data,environment,https://data.epa.ie/,api,json,loaded,P1,licence_number,Multiple REST APIs
+ppr,Property Price Register,property,https://www.propertypriceregister.ie/,bulk,csv,loaded,P1,composite,All residential sales since 2010
+cso,CSO PxStat,demographics,https://data.cso.ie,api,json-stat,not_built,P1,table_code,Full REST API
+planning,Planning Permissions,property,https://www.myplan.ie/,api,arcgis,not_built,P1,planning_ref,ArcGIS REST services
+hea,Higher Education Authority,education,https://hea.ie/statistics/,bulk,csv,not_built,P2,institution_code,CSV downloads
+courts,Courts Service,legal,https://www.courts.ie/,web,html,not_built,P2,case_ref,No structured API
+sipo,SIPO Donations,political,https://sipo.ie/,web,pdf,not_built,P3,none,PDF reports only
+rbo,Beneficial Ownership,identity,https://rbo.gov.ie/,restricted,none,blocked,P3,company_number,Restricted post-CJEU ruling
+ofac,OFAC Sanctions,sanctions,https://sanctionssearch.ofac.treas.gov/,api,xml,not_built,P2,entity_id,Reusable from br-acc
+eu_sanctions,EU Sanctions,sanctions,https://data.europa.eu/,api,xml,not_built,P2,entity_id,Reusable from br-acc
+icij,ICIJ Offshore Leaks,offshore,https://offshoreleaks.icij.org/,bulk,csv,not_built,P2,offshore_id,Reusable from br-acc

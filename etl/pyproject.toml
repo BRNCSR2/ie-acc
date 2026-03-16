@@ -1,0 +1,54 @@
+[project]
+name = "ieacc-etl"
+version = "0.1.0"
+description = "ETL pipelines for the Irish Open Transparency Graph"
+requires-python = ">=3.12"
+license = "AGPL-3.0-or-later"
+dependencies = [
+    "neo4j>=5.27",
+    "pandas>=2.2",
+    "httpx>=0.27",
+    "click>=8.1",
+    "pydantic>=2.10",
+    "pandera>=0.21",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0",
+    "pytest-asyncio>=0.24",
+    "mypy>=1.13",
+    "ruff>=0.8",
+    "pandas-stubs>=2.2",
+]
+
+[project.scripts]
+ieacc-etl = "ieacc_etl.runner:cli"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/ieacc_etl"]
+
+[tool.ruff]
+target-version = "py312"
+line-length = 100
+src = ["src", "tests"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "N", "W", "UP", "B", "A", "SIM", "TCH"]
+
+[tool.mypy]
+python_version = "3.12"
+strict = true
+packages = ["ieacc_etl"]
+mypy_path = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-m 'not integration'"
+markers = [
+    "integration: requires running Neo4j instance",
+]

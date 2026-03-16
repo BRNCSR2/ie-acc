@@ -1,0 +1,51 @@
+# Data
+data/
+*.csv.zip
+*.csv.gz
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+dist/
+build/
+.eggs/
+*.egg
+.mypy_cache/
+.ruff_cache/
+.pytest_cache/
+
+# Node
+node_modules/
+frontend/dist/
+
+# Environment
+.env
+*.env.local
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Docker
+neo4j-data/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# UV
+.venv/
+
+# Claude Code
+.claude/
+
+# Audit
+audit-results/
+
+# GDPR
+gdpr_objections/
+investigations/

@@ -1,0 +1,9 @@
+licence_number,licence_type,licensee_name,company_number,facility_name,facility_address,county,status,issue_date,expiry_date,activity
+EPA-W-001,Waste,Celtic Waste Solutions PLC,100002,Cork Waste Facility,Ringaskiddy Industrial Estate,Cork,Active,2018-06-15,2028-06-15,Waste disposal and recovery
+EPA-W-002,Waste,Shannon Renewables CLG,100005,Clare Recycling Centre,Ennis Business Park,Clare,Active,2020-01-10,2030-01-10,Waste recovery operations
+EPA-IPC-001,IPC,Greenfield Construction LTD,100001,Dublin Concrete Plant,Sandyford Industrial Estate,Dublin,Active,2019-03-20,2029-03-20,Cement and concrete production
+EPA-IPC-002,IPC,Atlantic Digital DAC,100003,Galway Data Centre,Parkmore Business Park,Galway,Active,2022-08-01,2032-08-01,Data centre operations
+EPA-W-003,Waste,Munster Medical Supplies LTD,200001,Cork Medical Waste,Little Island Industrial Estate,Cork,Surrendered,2015-04-01,2025-04-01,Clinical waste treatment
+EPA-IE-001,Industrial Emissions,Galway Bay Fisheries TEO,100004,Fish Processing Plant,Rossaveal Harbour,Galway,Active,2021-05-15,2031-05-15,Fish processing and packaging
+EPA-W-004,Waste,Celtic Waste Solutions PLC,100002,Dublin Transfer Station,Clondalkin Industrial Estate,Dublin,Active,2023-02-28,2033-02-28,Waste transfer station
+EPA-IPC-003,IPC,Greenfield Construction LTD,100001,Limerick Quarry,Castletroy,Limerick,Under Review,2017-11-01,2027-11-01,Quarrying and mineral extraction

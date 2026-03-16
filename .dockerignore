@@ -1,0 +1,14 @@
+data/
+node_modules/
+__pycache__/
+.git/
+.env
+*.egg-info/
+dist/
+build/
+.mypy_cache/
+.ruff_cache/
+.pytest_cache/
+.DS_Store
+audit-results/
+docs/
